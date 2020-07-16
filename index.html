@@ -9,16 +9,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/restaurant.css">
+    <link rel="stylesheet" href="css/public.css">
 
-    <!-- Javascript -->
-
-
+    <!-- Title -->
     <title>Meal</title>
+
   </head>
 
   <!-- BODY -->
-  <body>
+  <body ng-app="restaurant" ng-strict-di>
 
 
     <!-- HEADER -->
@@ -48,7 +48,7 @@
                 <a class="nav-link" href="">Home</a>
               </li>
               <li id="nav-menu" class="nav-item">
-                <a class="nav-link" href="#" onclick="$meal.loadMenu();">Menu</a>
+                <a class="nav-link" ui-sref="public.menu">Menu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
@@ -80,9 +80,7 @@
 
 
     <!-- MAIN BODY -->
-    <div id="main" class="container">
-
-    </div>
+    <ui-view></ui-view>
     <!-- MAIN BODY END -->
 
 
@@ -114,10 +112,20 @@
     <!-- FOOTER-END -->
 
 
-    <!-- Javascript(BS) -->
-    <script src="js/jquery-3.5.1.min.js" charset="utf-8"></script>
-    <script src="js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="js/ajax.js" charset="utf-8"></script>
-    <script src="js/script.js" charset="utf-8"></script>
+    <!-- JAVASCRIPT -->
+    <!-- Library -->
+    <script src="lib/jquery-3.5.1.min.js" charset="utf-8"></script>
+    <script src="lib/bootstrap.min.js" charset="utf-8"></script>
+    <script src="lib/angular.min.js" charset="utf-8"></script>
+    <script src="lib/angular-ui-router.min.js" charset="utf-8"></script>
+
+    <!-- Module -->
+    <script src="src/restaurant.module.js" charset="utf-8"></script>
+    <script src="src/public/public.module.js" charset="utf-8"></script>
+
+    <!-- Public -->
+    <script src="src/public/public.routes.js" charset="utf-8"></script>
+
+
   </body>
 </html>
