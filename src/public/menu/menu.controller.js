@@ -9,7 +9,6 @@ function MenuController(categories) {
   var menuCtrl = this;
 
   menuCtrl.category = categories;
-  console.log(menuCtrl.category);
 }
 
 }());

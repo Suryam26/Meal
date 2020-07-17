@@ -1,57 +1,16 @@
 <div id="main" class="container">
   <h2 class="text-center my-4">Menu</h2>
-{{ menuCtrl.category | json }}
+
   <div id="tiles" class="row">
 
-
-    <div class="col-lg-3 col-md-4 col-sm-6 my-3">
+    <div class="col-lg-3 col-md-4 col-sm-6 my-3" ng-repeat="menuCategory in menuCtrl.category">
         <a href="#">
           <div id="menu" class="bg-light rounded">
-            <span>Lunch</span>
+            <img ng-src="images/menu/{{menuCategory.short_name}}/{{menuCategory.short_name}}.jpg" height="100%" width="100%" alt="{{menuCategory.name}}">
+            <span>{{menuCategory.name}}</span>
           </div>
         </a>
     </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 my-3">
-        <a href="#">
-          <div id="menu" class="bg-light rounded">
-            <span>Lunch</span>
-          </div>
-        </a>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 my-3">
-        <a href="#">
-          <div id="menu" class="bg-light rounded">
-            <span>Lunch</span>
-          </div>
-        </a>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 my-3">
-        <a href="#">
-          <div id="menu" class="bg-light rounded">
-            <span>Lunch</span>
-          </div>
-        </a>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 my-3">
-        <a href="#">
-          <div id="menu" class="bg-light rounded">
-            <span>Lunch</span>
-          </div>
-        </a>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 my-3">
-        <a href="#">
-          <div id="menu" class="bg-light rounded">
-            <span>Lunch</span>
-          </div>
-        </a>
-    </div>
-
 
   </div>
 
