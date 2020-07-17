@@ -18,7 +18,7 @@
   </head>
 
   <!-- BODY -->
-  <body ng-app="restaurant" ng-strict-di>
+  <body ng-app="restaurant">
 
 
     <!-- HEADER -->
@@ -28,12 +28,12 @@
 
           <!-- Logo -->
           <div id="logo">
-            <a href=""><img src="images/logo.png" alt="logo-image"></a>
+            <a ui-sref="public.home"><img src="images/logo.png" alt="logo-image"></a>
           </div>
 
           <!-- Title -->
           <div class="navbar-brand mr-auto d-none d-md-block d-lg-block">
-            <a href=""><h1>Meal</h1></a>
+            <a ui-sref="public.home"><h1>Meal</h1></a>
           </div>
 
           <!-- Navigation Button -->
@@ -45,7 +45,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul id="nav-list" class="navbar-nav ml-auto">
               <li id="nav-home" class="nav-item d-block d-s-block d-md-none active">
-                <a class="nav-link" href="">Home</a>
+                <a class="nav-link" ui-sref="public.home">Home</a>
               </li>
               <li id="nav-menu" class="nav-item">
                 <a class="nav-link" ui-sref="public.menu">Menu</a>
@@ -129,10 +129,13 @@
     <script src="src/common/common.module.js" charset="utf-8"></script>
     <script src="src/common/loading/loading.component.js" charset="utf-8"></script>
     <script src="src/common/loading/loading.interceptor.js" charset="utf-8"></script>
+    <script src="src/common/menu.service.js" charset="utf-8"></script>
 
     <!-- Public  Module-->
     <script src="src/public/public.module.js" charset="utf-8"></script>
     <script src="src/public/public.routes.js" charset="utf-8"></script>
+    <script src="src/public/menu/menu.controller.js" charset="utf-8"></script>
+
 
 
   </body>
