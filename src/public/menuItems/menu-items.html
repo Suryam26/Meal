@@ -9,7 +9,7 @@
         <div class="col-sm-4 px-2 py-2">
           <div class="text-center">
             <h4>{{ items.short_name }}</h4>
-            <img class="img-fluid rounded" ng-src="images/test.jpg" width="200" height="200">
+            <img class="img-fluid rounded" ng-src="{{ menuItemCtrl.link }}/images/{{ items.short_name }}.jpg" width="250" height="150" alt="{{ items.name }}">
             <div>Price: {{ items.price_large }} $$</div>
           </div>
         </div>
