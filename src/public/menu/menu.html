@@ -4,7 +4,7 @@
   <div id="tiles" class="row">
 
     <div class="col-lg-3 col-md-4 col-sm-6 my-3" ng-repeat="menuCategory in menuCtrl.category">
-        <a href="#">
+        <a ui-sref="public.menuItems({ 'category': menuCategory.short_name })">
           <div id="menu" class="bg-light rounded">
             <img ng-src="images/menu/{{menuCategory.short_name}}/{{menuCategory.short_name}}.jpg" height="100%" width="100%" alt="{{menuCategory.name}}">
             <span>{{menuCategory.name}}</span>

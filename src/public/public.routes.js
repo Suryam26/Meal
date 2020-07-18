@@ -28,6 +28,18 @@ function routeConfig($stateProvider) {
           return MenuService.getCategory();
         }]
       }
+    })
+
+    .state('public.menuItems', {
+      url: '/menu/{category}',
+      templateUrl: 'src/public/menuItems/menu-items.html',
+      controller: 'MenuItemController',
+      controllerAs: 'menuItemCtrl',
+      resolve: {
+        menuItems: ['$stateParams', 'MenuService', function ($stateParams, MenuService) {
+          return MenuService.getMenuItems($stateParams.category);
+        }]
+      }
     });
 }
 }());

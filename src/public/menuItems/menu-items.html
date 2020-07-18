@@ -1,0 +1,28 @@
+<div class="container" id="main">
+  <h2 class="text-center my-4">{{ menuItemCtrl.menuItems.category.name }} Menu</h2>
+  <p>{{ menuItemCtrl.menuItems.category.special_instructions }}</p>
+
+  <section class="row">
+
+    <div class="col-lg-6 my-2" ng-repeat="items in menuItemCtrl.menuItems.menu_items track by $index">
+      <div class="row">
+        <div class="col-sm-4 px-2 py-2">
+          <div class="text-center">
+            <h4>{{ items.short_name }}</h4>
+            <img class="img-fluid rounded" ng-src="images/test.jpg" width="200" height="200">
+            <div>Price: {{ items.price_large }} $$</div>
+          </div>
+        </div>
+        <div class="col-sm-8 px-4 py-3">
+          <div class="align-middle">
+            <h4 class="text-center">{{ items.name }}</h4>
+            <p class="text-center text-md-left">
+              {{ items.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
