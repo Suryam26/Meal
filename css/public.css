@@ -37,10 +37,8 @@
 
 @media (max-width: 575px) {
   #tiles div {
+    height: 235px;
+    width: 95%;
     margin: auto;
-    width: 75%;
-  }
-  #tiles #map-tile {
-    width: 100%;
   }
 }
