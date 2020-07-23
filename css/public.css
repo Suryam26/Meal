@@ -37,7 +37,7 @@
 
 @media (max-width: 575px) {
   #tiles div {
-    height: 235px;
+    height: 250px;
     width: 95%;
     margin: auto;
   }
